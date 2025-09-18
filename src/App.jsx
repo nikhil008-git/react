@@ -1,4 +1,17 @@
-// Post component with props
+import React, { useState } from 'react';
+
+const ToggleMessage = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setIsVisible(!isVisible)}>
+                Toggle Message
+            </button>
+            {isVisible && <p>This message is conditionally rendered!</p>}
+        </div>
+    );
+};
 function PostComponent({ name, role, time, profilePic, content }) {
   return (
     <div
@@ -65,6 +78,7 @@ function App() {
           profilePic="https://randomuser.me/api/portraits/men/32.jpg"
           content="Exploring new UI trends for 2025. Minimalism is 🔑. Let me know your thoughts on micro-interactions."
         />
+        <ToggleMessage />
       </div>
     </div>
   );
