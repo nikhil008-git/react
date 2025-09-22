@@ -21,7 +21,8 @@ function PostComponent({ name, role, time, profilePic, content }) {
         padding: "15px",
         marginBottom: "20px",
         boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-      }}
+      }
+    }
     >
       {/* Header */}
       <div style={{ display: "flex", marginBottom: "10px" }}>
